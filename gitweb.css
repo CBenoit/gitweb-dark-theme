@@ -18,9 +18,33 @@ caption, tbody, tfoot, thead, tr, th, td {
   background: transparent;
 }
 
-ol, ul { list-style: none; }
+p { padding: 0.5em 0; }
 
-blockquote, q { quotes: none; }
+ol, ul { margin: 0.5em; }
+
+ol, ul, li, ol {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+code {
+  background-color: #181818;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  padding: 0.2em;
+}
+
+pre code {
+  display: inline-block;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+blockquote, q {
+  quotes: none;
+  padding-left: 1em;
+  border-left: 0.25em solid #343434;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -53,8 +77,8 @@ body {
   font: 13px Helvetica,arial,freesans,clean,sans-serif;
   line-height: 1.4;
   margin: 0 0 105px;
-  background-color: #fff;
-  color: #000000;
+  background-color: #1E1E1E;
+  color: #C0C0C0;
 }
 
 /* Monospaced Fonts */
@@ -110,12 +134,12 @@ td, th {
   margin-bottom: 20px;
   font-size: 20px;
   font-family: Helvetica, Arial, Freesans, Clean, sans-serif;
-  background: #FFFFFF; /* old browsers */
-  background: -moz-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#F5F5F5)); /* webkit */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=0 ); /* ie */
-  background: -o-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
-  border-bottom: 1px solid #dfdfdf;
+  background: #181818; /* old browsers */
+  background: -moz-linear-gradient(top, #181818 0%, #212121 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181818), color-stop(100%, #212121)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181818', endColorstr='#212121',GradientType=0 ); /* ie */
+  background: -o-linear-gradient(top, #181818 0%, #212121 100%);
+  border-bottom: 1px solid #343434;
 }
 
 .page_header a:link, .page_header a:visited {
@@ -136,9 +160,7 @@ td, th {
 }
 
 .page_header img.logo {
-  position: relative;
-  top: 7px;
-  margin-right: 5px;
+  display: none; # hide the git-scm logo
 }
 
 /* Page Footer
@@ -152,13 +174,13 @@ td, th {
   height: 80px;
   line-height: 80px;
   margin-top: 15px;
-  background: #f1f1f1;
-  border-top: 2px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  background: #212121;
+  border-top: 2px solid #343434;
+  border-bottom: 1px solid #343434;
 }
 
 .page_footer_text {
-  color: #666;
+  color: #C1C1C1;
   display: inline;
   float: left;
   margin-left: 25px;
@@ -205,8 +227,8 @@ a.rss_logo:hover {
 .index_include {
   width: 95%;
   margin: 0 auto 15px;
-  background: -moz-linear-gradient(center top , #FFFFFF 0%, #F5F5F5 100%) repeat scroll 0 0 transparent;
-  border: 1px solid #DFDFDF;
+  background: #181818;
+  border: 1px solid #484848;
   padding: 8px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -223,7 +245,7 @@ a.rss_logo:hover {
 .history {
   width: 95%;
   margin: 0 auto 15px auto;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #484848;
   -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -233,7 +255,7 @@ a.rss_logo:hover {
 .shortlog th,
 .tree th,
 .commit_search th {
-  color: #afafaf;
+  color: #C0C0C0;
   font-weight: normal;
 }
 
@@ -245,7 +267,7 @@ a.rss_logo:hover {
 .shortlog tr,
 .tree tr,
 .commit_search tr {
-  background: #eaeaea;
+  background: #1C1C1C;
   height: 2.5em;
   text-align: left;
   color: #545454;
@@ -257,13 +279,13 @@ a.rss_logo:hover {
 .commit_search tr.dark, .commit_search tr.light,
 .history tr.dark, .history tr.light,
 .heads tr.dark, .heads tr.light {
-  background: #F9F9F9; /* old browsers */
-  background: -moz-linear-gradient(top, #F9F9F9 0%, #EFEFEF 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F9F9F9), color-stop(100%,#EFEFEF)); /* webkit */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9F9F9', endColorstr='#EFEFEF',GradientType=0 ); /* ie */
-  background: -o-linear-gradient(top, #F9F9F9 0%, #EFEFEF 100%);
+  background: #181818; /* old browsers */
+  background: -moz-linear-gradient(top, #181818 0%, #242424 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #181818), color-stop(100%,#242424)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181818', endColorstr='#242424',GradientType=0 ); /* ie */
+  background: -o-linear-gradient(top, #181818 0%, #242424 100%);
   height: 2.5em;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #484848;
 }
 
 th .header {
@@ -289,7 +311,13 @@ th .header {
 }
 
 .commit_search {
-  background: #eaeaea;
+  background: #181818;
+}
+
+input[type="text"] {
+  background-color: #222222;
+  border-color: #181818;
+  color: #C0C0C0;
 }
 
 .page_nav,
@@ -297,15 +325,15 @@ th .header {
 .page_path,
 .search {
   width: 94%;
-  background: #eaeaea;
-  color: #545454;
-  border: 1px solid #d8d8d8;
+  background: #181818;
+  color: #C0C0BA;
+  border: 1px solid #484848;
   padding: 5px;
   margin: 0 auto 15px auto;
 }
 
 .history {
-  background: #eaeaea;
+  background: #202020;
 }
 
 .title {
@@ -315,8 +343,8 @@ th .header {
 }
 
 .readme {
-  background: #eaf2f5;
-  border: 1px solid #bedce7;
+  background: #181818;
+  border: 1px solid #484848;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -387,9 +415,9 @@ th .header {
 .projects_list,
 .tags {
   width: 95%;
-  background: #f0f0f0;
-  color: #545454;
-  border: 1px solid #d8d8d8;
+  color: #f0f0f0;
+  background: #545454;
+  border: 1px solid #484848;
   padding: 5px;
   margin: 0 auto 15px auto;
 }
@@ -397,7 +425,7 @@ th .header {
 .heads {
   width: 95%;
   color: #545454;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #484848;
   padding: 5px;
   margin: 0 auto 15px auto;
 }
@@ -405,30 +433,30 @@ th .header {
 .header {
   width: 94%;
   margin: 0 auto 15px auto;
-  background: #eaf2f5;
-  border: 1px solid #bedce7;
+  background: rgba(0, 75, 102, 0.1);
+  border: 1px solid #344C55;
   padding: 5px;
 }
 
 .header .age {
   float: left;
-  color: #000;
   font-weight: bold;
+  color: #C0C0C0;
   width: 10em;
 }
 
 .title_text {
   width: 94%;
-  background: #eaf2f5;
-  border: 1px solid #bedce7;
+  background: rgba(0, 75, 102, 0.1);
+  border: 1px solid #344C55;
   padding: 5px;
   margin: 0 auto 0 auto;
 }
 
 .log_body {
   width: 94%;
-  background: #eaf2f5;
-  border: 1px solid #bedce7;
+  background: #181818;
+  border: 1px solid #484848;
   border-top: 0;
   padding: 5px;
   margin: 0 auto 15px auto;
@@ -437,16 +465,16 @@ th .header {
 .page_body {
   line-height: 1.4em;
   width: 94%;
-  background: #f8f8f8;
-  border: 1px solid #d8d8d8;
+  background: #272822;
+  border: 1px solid #484848;
   padding: 5px;
   margin: 15px auto 15px auto;
 }
 
 .diff_tree {
   width: 95%;
-  background: #f0f0f0;
-  border: 1px solid #d8d8d8;
+  background: #202020;
+  border: 1px solid #484848;
   padding: 5px;
   margin: 0 auto 15px auto;
 }
@@ -568,21 +596,21 @@ div.diff.from_file {
 }
 
 .chunk_header {
-  background: #eaf2f5;
+  background: #1C1C1C;
   color: #999;
 }
 
 .rem {
-  background: #ffdddd;
+  background: #380000;
 }
 .rem .marked {
-  background: #ffaaaa;
+  background: #662222;
 }
 .add {
-  background: #ddffdd;
+  background: #002800;
 }
 .add .marked {
-  background: #7dff7d;
+  background: #225522;
 }
 
 .extended_header {
@@ -751,4 +779,3 @@ td.pre, div.pre, div.diff {
 .kwb    { color:#6b3099; }
 .kwc    { color:#d4663d; }
 .kwd    { color:#2928ff; }
-
