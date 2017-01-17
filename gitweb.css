@@ -766,16 +766,16 @@ td.pre, div.pre, div.diff {
 
 /* Highlighting theme definition: */
 
-.num    { color:#6ecf36; }
-.esc    { color:#ff00ff; }
-.str    { color:#ff00d3; background-color: #edc9ec }
-.dstr   { color:#818100; }
-.slc    { color:#838183; font-style:italic; }
-.com    { color:#838183; font-style:italic; }
-.dir    { color:#008200; }
-.sym    { color:#000000; }
-.line   { color:#555555; }
-.kwa    { color:#666666; font-weight:bold; }
-.kwb    { color:#6b3099; }
-.kwc    { color:#d4663d; }
-.kwd    { color:#2928ff; }
+.num    { color: #A6E22E; }
+.esc    { color: #ff00ff; }
+.str    { color: #E6DB74; }
+.dstr   { color: #818100; }
+.slc    { color: #838183; font-style:italic; }
+.com    { color: #838183; font-style:italic; }
+.dir    { color: #008200; }
+.sym    { color: #000000; }
+.line   { color: #555555; }
+.kwa    { color: #AE81FF; }
+.kwb    { color: #F92672; }
+.kwc    { color: #E04812; }
+.kwd    { color: #66D9EF; }
