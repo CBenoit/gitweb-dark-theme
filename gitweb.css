@@ -553,11 +553,10 @@ span.refs span.tag {
 }
 
 span.refs span.head {
-  color: #707070;
   display: inline-block;
   margin: 0;
-  background-color: #c4ffc4;
-  border: 1px solid #78ff78;
+  background-color: #138713;
+  border: 1px solid #1BB51E;
   border-radius: 3px;
   height: 18px;
   padding: 0 6px;
@@ -568,7 +567,7 @@ span.refs span.head {
 }
 
 span.refs a {
-  color: #4e4e4e;
+  color: #c4ffc4;
   font: 11px "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, monospace;
   line-height: 18px;
 }
